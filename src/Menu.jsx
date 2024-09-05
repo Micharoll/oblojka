@@ -2,11 +2,13 @@ import React, {useEffect, useState} from "react";
 var Name = "Valentin Popov"
 export const Menu = () => {
     const [isOpen, setOpen] = useState();
+
     useEffect(()=>{
         let startTouchX = 0;
         let endTouchX = 0;
         let startTouchY = 0;
         let endTouchY = 0;
+        
 
         document.addEventListener("touchstart", (event) => {
             startTouchX = event.changedTouches[0].pageX;
@@ -23,20 +25,22 @@ export const Menu = () => {
                 endTouchX > startTouchX
             )
                 setOpen(true);
+
             if (
                 Math.abs(endTouchY - startTouchY) < 30 &&
                 endTouchX < startTouchX
             )
                 setOpen(false);
+
         });
     }, []);
 
     return (
         <div className="Sidebar">
-            <div className="btn-opener">
+            <div className={`btn-opener ${isOpen ? "active-btn" : ""}`}>
                 <button><img src="/Images/Arrow.png" alt="" /></button>
             </div>
-            <div className={`side ${isOpen ? "active" : ""} `}>
+            <div className={`side ${isOpen ? "active" : ""}`}>
                 <p className="side-name">{Name}</p>
                 <button>Какой-то функционал</button>
                 <button>Какой-то функционал</button>

@@ -7,14 +7,21 @@
 body {
   background-color: rgb(255, 255, 255);
 }
+.btn-opener {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transition: .4s;
+}
 .btn-opener button {
   background-color: transparent;
   border: none;
 }
 .btn-opener img{
-  visibility: visible;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 .side {
   transition: .7s;
@@ -35,7 +42,10 @@ body {
   font-size: 50px;
 }
 .active {
-  left: 0;
+  left: 30px;
+}
+.active-btn {
+  left: -50px;
 }
 
 /* .side-menu img {
