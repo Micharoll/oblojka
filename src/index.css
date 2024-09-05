@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Courier New', Courier, monospace;
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
+.btn-opener button {
+  background-color: transparent;
+  border: none;
+}
+.btn-opener img{
+  visibility: visible;
+  height: 60px;
+  width: 60px;
+}
+.side {
+  transition: .7s;
+  height: 100%;
+  width: 100%;
+  left: -105%;
+  position: absolute;
+  text-align: center;
+}
+.side button {
+  height: 10%;
+  width: 70%;
+  margin: 30px;
+  border-radius: 10px;
+}
+.side-name {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+}
+.active {
+  left: 0;
+}
+
+/* .side-menu img {
+  width: 50px;
+  height: 50px;
+}
+.side-el {
+  flex: 0 0 100%;
+} */
