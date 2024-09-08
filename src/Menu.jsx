@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 var Name = "Valentin Popov"
+const vis = document.querySelector('.site')
+console.log(vis)
 export const Menu = () => {
     const [isOpen, setOpen] = useState();
 
@@ -18,20 +20,17 @@ export const Menu = () => {
         document.addEventListener("touchend", (event) => {
             endTouchX = event.changedTouches[0].pageX;
             endTouchY = event.changedTouches[0].pageY;
-
             if (
                 startTouchX < 100 &&
                 Math.abs(endTouchY - startTouchY) < 30 &&
                 endTouchX > startTouchX
             )
                 setOpen(true);
-
             if (
                 Math.abs(endTouchY - startTouchY) < 30 &&
                 endTouchX < startTouchX
             )
                 setOpen(false);
-
         });
     }, []);
 
