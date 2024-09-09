@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from "react";
 var Name = "Valentin Popov"
-const vis = document.querySelector('.site')
-console.log(vis)
 export const Menu = () => {
     const [isOpen, setOpen] = useState();
+    const [loggedIn, setDisplay] = useState()
 
     useEffect(()=>{
         let startTouchX = 0;
